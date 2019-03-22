@@ -1,0 +1,123 @@
+html, body{
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+}
+body{
+    display: grid;
+    grid-template-columns: 350px 1fr;    
+    grid-template-rows:1fr 150px ;            
+    grid-template-areas: "lateral content"
+                         "lateral  viewing";
+}
+ol{
+    padding: 0 15px;    
+}
+
+ol a{
+    text-decoration: none;  
+    color: white;
+    font-size: .9em;    
+}
+
+ol li{
+    margin-bottom: 1em;
+}
+
+.lateral{
+    background-color: #15192a;
+    grid-area: lateral;        
+    color: white;
+}
+.content{
+    grid-area: content;    
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas: "search user" "material material";
+    padding: 10px;
+}
+.viewing{
+    grid-area: viewing;        
+    background: linear-gradient(to right, #ff0000, #ff458b);
+    height: 100%;
+}
+.lateral-content{
+    padding: 1em;
+    display: grid;
+    grid-template-rows: auto 1fr 1fr;    
+    height: 100vh;    
+    box-sizing: border-box;
+}
+#logo img{
+    width: 100%;    
+}
+
+#myplaylist, .otherplaylist{
+    overflow: auto;
+}
+
+.list-friends{
+    list-style-type: none;
+    padding: 0;
+}
+.list-friends li, .user{
+    display: flex;
+    align-items: center;    
+}
+.list-friends li:not(:last-child){
+    margin-bottom: 20px;
+}
+.list-friends li img , .user img{
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.search{    
+    grid-area: search;        
+    width: 100%;    
+}
+.user{    
+    grid-area: user;      
+    display: inline-flex; 
+    justify-content: flex-end;
+}
+.material{
+    grid-area: material;
+    overflow: auto;
+}
+input{
+    -webkit-appearance: none;
+    -moz-appearance: none;    
+    appearance: none;    
+    border-radius: 10px;
+    outline: none;
+    font-size: 16px;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 11px 10px;
+    border: none;       
+    background-color: #f0f0f0;  
+    transition: all .1s linear;
+    font-size: 16px; 
+}
+input:focus{
+    transform: scale(1.01);
+}
+
+.isDisplayList h3,label, h1, figure{
+    margin: 0;
+}
+.isMaterial img{
+    height: 180px;
+    width: 250px;
+}
+.isMaterial{
+    margin-left: 15px;
+}
+
+.contentMaterial{
+    display: flex;
+    overflow: auto;
+}
